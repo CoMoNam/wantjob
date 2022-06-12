@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 맵핑될 DAO 인터페이스의 Full name 을 줍니다. -->
+<mapper namespace="com.web.dao.MemberDAO">
+
+	<!-- id 속성은 DAO 의 메소드와 같아야 한다. 여기의 boardVO 는 mybatis-confg.xml 에 Alias 되어 있습니다. -->
+	<insert id="register" parameterType="com.web.vo.MemberVO">
+  <selectKey keyProperty="mnum" resultType="String" order="BEFORE">
+      select members_seq.NEXTVAL from dual
+      
+        </selectKey>
+		INSERT INTO members(
+			 mnum
+			,name
+            , ID
+            , password
+            , hp
+            , gender
+            , condition
+            , useryn
+            , gosuyn
+            , adminyn
+            , photo
+        ) VALUES (
+        	 #{mnum}
+          	  ,#{name}
+           	  , #{ID}
+              , #{password}
+              , #{hp}
+               , #{gender}
+               , #{gender}
+               , #{useryn}
+               , #{gosuyn}
+               , #{adminyn}
+               , #{photo}
+          
+        )
+	
+	</insert>
+	<select id="login"  resultType="int">
+		SELECT count (*)	
+			FROM members	
+			WHERE ID= #{id} and password = #{password}  
+	</select>
+	
+	
+<!-- 회원전체 리스트 -->
+	<select id="memberList" resultType="com.web.vo.MemberVO">
+		 SELECT  mnum, name, ID , password , hp , gender, condition , useryn , gosuyn , adminyn
+		 FROM members  
+		 order by mnum desc
+		  
+	</select>
+	
+	<!-- 회원정보 상세조회 -->
+	<select id="viewMember" resultType="com.web.vo.MemberVO">
+		SELECT 
+		  mnum, name, ID , password , hp , gender, condition , useryn , gosuyn , adminyn
+		
+		FROM members
+		WHERE ID= #{id}
+	</select>
+	
+	 <delete id="idremove">
+   		delete 
+   		from members
+   		where ID= #{id} and password = #{password}
+   </delete>
+<!-- 
+<resultMap id="memberVOResultMap" type="MemberVO">
+        <id property="mnum" column="mnum"/>
+        <result property="ID" column="ID"/>
+        <result property="password" column="password"/>
+        <result property="name" column="name"/>
+        <result property="hp" column="hp"/>
+        <result property="gender" column="gender"/>
+        <result property="condition" column="condition"/>
+        <result property="useryn" column="useryn"/>
+        <result property="gosuyn" column="gosuyn"/>
+        <result property="adminyn" column="adminyn"/>
+        <result property="photo" column="photo"/>
+        
+    </resultMap>
+-->
+</mapper>

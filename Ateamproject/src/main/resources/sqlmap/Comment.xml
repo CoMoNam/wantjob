@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.web.dao.forum.CommentDAO">
+
+<resultMap id="CommentResultMap" type="CommentVO">
+    <id property="conum" column="conum"/>
+        <result property="pnum" column="pnum"/>
+        <result property="mnum" column="mnum"/>
+        <result property="cocontent" column="cocontent"/>
+        <result property="id" column="id"/>
+        <result property="codate" column="codate"/>
+        <result property="update_date" column="update_date"/>
+</resultMap>
+
+<resultMap id="ForumResultMap" type="ForumVO">
+        <id property="pnum" column="pnum"/>
+        <result property="mnum" column="mnum"/>
+        <result property="ptitle" column="ptitle" />
+        <result property="pcontent" column="pcontent" />
+        <result property="id" column="id" />
+        <result property="pdate" column="pdate" />
+        <result property="phits" column="phits" />
+    </resultMap>
+
+<select id ="list" resultMap="CommentResultMap">
+SELECT * FROM COMMENTS WHERE PNUM = #{pnum}
+ORDER BY CONUM
+</select>
+
+<insert id="create">
+INSERT INTO COMMENTS(
+COCONTENT, ID, PNUM, CODATE
+) VALUES (
+#{cocontent}, #{id}, #{pnum}, SYSDATE 
+)
+</insert>
+<update id="update">
+UPDATE COMMENTS SET 
+COCONTENT = #{cocontent}, 
+CODATE = #{codate}
+WHERE CONUM = #{CONUM}
+</update>
+
+<delete id="delete">
+DELETE FROM COMMENTS 
+WHERE CONUM = #{conum}
+</delete>
+
+<select id="listPaging" resultType="CommentVO">
+    	<![CDATA[
+    	SELECT RN,PNUM,MNUM,ID,COCONTENT,CONUM,CODATE FROM (
+SELECT ROWNUM AS RN, PNUM,MNUM,ID,COCONTENT,CONUM,CODATE FROM (
+SELECT * FROM POST ORDER BY CONUM DESC)WHERE ROWNUM <= #{pageNum} * #{amount}
+) WHERE RN > (#{pageNum} -1) * #{amount} 
+    	]]>  
+    </select>
+    
+<select id="countComments" resultType="int">
+SELECT COUNT(*) FROM COMMENTS
+WHERE PNUM = #{pnum}
+</select>
+
+</mapper>

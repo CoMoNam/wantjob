@@ -1,0 +1,141 @@
+@charset "UTF-8";
+
+.recevied{
+	width: 50%;
+	margin:0 25%;
+}
+.received-from{
+	display: block;
+	margin: 30px 0;
+	border: 1px solid #e1e1e1;
+	border-radius: 5px;
+	padding: 5px;
+}
+
+.received-from section{
+	position: relative;
+	margin-bottom: 40px;
+}
+.received-select{
+	width: 150px;
+	height: 50px;
+	background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNMCAxOGgxOFYwSDB6Ii8+PHBhdGggc3Ryb2tlPSIjMDBDN0FFIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMiIgZD0iTTE0LjQzNCA2Ljc1MWwtNS40IDUuNC01LjQtNS40Ii8+PC9nPjwvc3ZnPg==);
+    background-repeat: no-repeat, repeat;
+    background-position: right 0.7em top 50%,0 0;
+    background-size: 1em auto,100%;
+    padding: 0.6875rem 2rem 0.6875rem 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #323232;
+    border-radius: 5px;
+}
+.received-select:focus{
+	outline: 2px solid #00c7ae;
+	border-color: #00c7ae;
+}
+select {
+
+   -webkit-appearance:none; /* for chrome */
+
+   -moz-appearance:none; /*for firefox*/
+
+   appearance:none;
+
+}
+
+select::-ms-expand{
+
+   display:none;/*for IE10,11*/
+
+}
+
+.input-group{
+	display: flex;
+}
+
+fieldset{
+	border-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.price-control{
+	width: 200px;
+	height: 50px;
+	text-align: right;
+	font-size: 40px;
+	border-style: none; 
+	position: relative;
+}
+.input-text{
+	font-size: 35px;
+	font-weight: bolder;
+	padding-left: 5px;
+	line-height: 1.4;
+}
+.input-border{
+	color: #e1e1e1;
+	width: 255px;
+	left: 0;
+	position: absolute;
+}
+.desc-wrap label{
+	display: flex;
+}
+
+.desc-wrap label strong{
+	flex: 1;
+    font-weight: 700;
+    font-size: 1.125rem;
+    color: #323232;
+}
+.text-count{
+	font-size: .75rem;
+    display: inline-flex;
+    align-items: flex-end;
+    color: #737373;
+}
+.text-count span{
+	color:  #b5b5b5;
+}
+.textbox{
+	padding: 0.75rem;
+    border-radius: 0.5rem;
+    height: auto;
+    font-size: 1rem;
+    border: 0.0625rem solid #e1e1e1;
+    border-radius: 5px;
+    resize: none;
+    width: 95%;
+}
+.textbox:focus{
+	outline: 2px solid #00c7ae;
+	border-color: #00c7ae;
+}
+.send-btn{
+	display:block;
+	border-radius: 5px;
+	background-color: #00c7ae;
+	border-style: none;
+	color: #fff;
+	width: 100%;
+	height: 50px;
+	font-size: 1.25rem;
+	font-weight: bold;
+}
+.send-btn:hover {
+	background-color: #00a48f;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,108 @@
+/** button css **/
+.btn{
+  font-weight: bolder;
+  border-radius: 5px;
+  background-color: #00c7ae;
+  color:white;
+  text-align: center;
+}
+
+.btn:hover{
+  background-color: #2b9d8f;
+  color: white;
+}
+
+/** app-body **/
+#app #app-body {
+    height: 100%;
+    position: relative;
+    flex-grow: 1;
+}
+
+/** requestChat css **/
+@media (max-width: 991.98px)
+.chat-list {
+    padding-top: 1.75rem;
+}
+
+.chat-list .page-header {
+    z-index: 99;
+    position: -webkit-sticky;
+    position: sticky;
+    background: #fff;
+    top: -3rem;
+    border-bottom: 0.0625rem solid #f2f2f2;
+}
+
+.chat-list .container {
+    max-width: 37.5rem;
+}
+
+@media (min-width: 768px)
+.chat-list .page-header {
+    position: static;
+    border-bottom: none;
+}
+
+@media (max-width: 991.98px)
+.chat-list .container {
+    max-width: inherit;
+    padding: 0 1rem;
+}
+
+@media (min-width: 768px)
+.no-items {
+    padding-top: 3.75rem;
+    padding-bottom: 3.75rem;
+}
+
+.no-items {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+html{ font-size: 1rem;}
+
+.container {
+    width: 100%;
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+.chat-list .page-body {
+    min-height: -webkit-fill-available;
+    min-height: -moz-available;
+    min-height: stretch;
+   /* padding: 1.5rem 0 9.6875rem; */
+}
+
+.chat-list .page-body>.container.no-chat {
+    width: 100%;
+    display: table;
+}
+
+.chat-list .page-body>.container {
+    min-height: 12.5rem;
+}
+
+/** section **/
+
+section{
+  display:block;
+}
+
+@media (max-width: 991.98px)
+section #chat-h3 {
+    font-size: 1.375rem;
+}

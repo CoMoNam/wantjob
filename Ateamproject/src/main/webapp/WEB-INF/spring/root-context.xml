@@ -8,9 +8,15 @@
 		http://www.springframework.org/schema/beans/spring-beans-4.3.xsd 
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
 
-	<!-- Root Context: defines shared resources visible to all other web components -->
-		
-<!-- SqlSession --> 
+	<!-- 데이터베이스 연결 --> 
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close"> 
+		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/> 
+		<property name="url" value="jdbc:oracle:thin:@localhost:1521:xe" /> 
+		<property name="username" value="Btest"/> 
+		<property name="password" value="1234"/> 
+	</bean>
+	
+	<!-- SqlSession --> 
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean"> 
 		<property name="dataSource" ref="dataSource" />
 		
@@ -26,7 +32,6 @@
 		<constructor-arg name="sqlSessionFactory" ref="sqlSessionFactory" /> 
 	</bean>
 	
-	
 	<!-- 지정된 베이스 패키지에서 DAO(Mapper) 를 검색하여 등록합니다. -->
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer"> 
 		<property name="basePackage" value="com.web.dao" /> 
@@ -37,9 +42,8 @@
 		<property name="dataSource" ref="dataSource" /> 
 	</bean>
 	
-
 	<!-- 아노테이션 기반의 트랜잭션을 사용합니다. --> 
 	<tx:annotation-driven transaction-manager="transactionManager"/> 
-		
-		
+
 </beans>
+

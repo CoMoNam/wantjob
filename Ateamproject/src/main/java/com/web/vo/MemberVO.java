@@ -17,208 +17,101 @@ public class MemberVO {
 	private String gosuyn;
 	private String adminyn;
 	private String photo;
-	private String memberexit;
 	
 	
 	
+	
 
 	
-	public String getMemberexit() {
-		return memberexit;
-	}
-
-
-
-
-
-	public void setMemberexit(String memberexit) {
-		this.memberexit = memberexit;
-	}
-
-
-
-
-
 	public String getMnum() {
 		return mnum;
 	}
-
-
-
-
 
 	public void setMnum(String mnum) {
 		this.mnum = mnum;
 	}
 
-
-
-
-
 	public String getID() {
 		return ID;
 	}
 
-
-
-
-
-	public void setID(String iD) {
-		ID = iD;
+	public void setID(String ID) {
+		this.ID = ID;
 	}
 
-
-
-
-
-	public String getPassword() {
+	public String getpassword() {
 		return password;
 	}
 
-
-
-
-
-	public void setPassword(String password) {
+	public void setpassword(String password) {
 		this.password = password;
 	}
 
-
-
-
-
-	public String getName() {
+	public String getname() {
 		return name;
 	}
 
-
-
-
-
-	public void setName(String name) {
+	public void setname(String name) {
 		this.name = name;
 	}
-
-
-
-
-
-	public String getHp() {
+	public String gethp() {
 		return hp;
 	}
 
-
-
-
-
-	public void setHp(String hp) {
+	public void sethp(String hp) {
 		this.hp = hp;
 	}
 
-
-
-
-
-	public String getGender() {
+	public String getgender() {
 		return gender;
 	}
 
-
-
-
-
-	public void setGender(String gender) {
+	public void setgender(String gender) {
 		this.gender = gender;
 	}
 
-
-
-
-
-	public String getConditions() {
+	public String getconditions() {
 		return conditions;
 	}
 
-
-
-
-
-	public void setConditions(String conditions) {
+	public void setconditions(String conditions) {
 		this.conditions = conditions;
 	}
 
-
-
-
-
-	public String getUseryn() {
+	public String getuseryn() {
 		return useryn;
 	}
 
-
-
-
-
-	public void setUseryn(String useryn) {
+	public void setuseryn(String useryn) {
 		this.useryn = useryn;
 	}
 
-
-
-
-
-	public String getGosuyn() {
+	public String getgosuyn() {
 		return gosuyn;
 	}
 
-
-
-
-
-	public void setGosuyn(String gosuyn) {
+	public void setgosuyn(String gosuyn) {
 		this.gosuyn = gosuyn;
 	}
-
-
-
-
-
-	public String getAdminyn() {
+	public String getuadminyn() {
 		return adminyn;
 	}
 
-
-
-
-
-	public void setAdminyn(String adminyn) {
+	public void setadminyn(String adminyn) {
 		this.adminyn = adminyn;
 	}
-
-
-
-
-
-	public String getPhoto() {
+	
+	public String getphoto() {
 		return photo;
 	}
 
-
-
-
-
-	public void setPhoto(String photo) {
+	public void setphoto(String photo) {
 		this.photo = photo;
 	}
-
-
-
-
-
 	@Override
 	public String toString() {
 		return "MemberVO [MNUM=" + mnum+", ID=" + ID + ", password=" + password + ", name=" + name + ", hp=" + hp + ", gender="
-				+ gender + ", conditions=" + conditions + ", useryn=" + useryn + " , gosuyn=" + gosuyn + ", adminyn=" + adminyn + ", photo=" + photo +", memberexit=" + memberexit +  "]";
+				+ gender + ", conditions=" + conditions + ", useryn=" + useryn + " , gosuyn=" + gosuyn + ", adminyn=" + adminyn + ", photo=" + photo + "]";
 	}
 	
 

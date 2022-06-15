@@ -3,6 +3,7 @@ package com.web.domain;
 public class LoginDTO {
 	private String id;
 	private String password;
+	private String mnum;
 	private boolean useCookie;
 	
 	
@@ -29,11 +30,20 @@ public class LoginDTO {
 		this.useCookie = useCookie;
 	}
 	
+	public String getMnum() {
+		return mnum;
+	}
+
+	public void setMnum(String mnum) {
+		this.mnum = mnum;
+	}
+	
 	@Override
 	 public String toString() {
         return "LoginDTO{" +
                 "ID='" + id + '\'' +
                 ", password='" + password + '\'' +
+                 ", mnum='" + mnum + '\'' +
                 ", useCookie=" + useCookie +
                 '}';
     }

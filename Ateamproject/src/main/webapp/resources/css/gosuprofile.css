@@ -1,0 +1,146 @@
+@charset "UTF-8";
+
+ul li{
+	list-style: none;
+}
+.gosumypage{
+	width: 50%;
+	height: 100%;
+	margin: 0 25%;
+}
+/* ----------gosuheader------------- */
+.gosuheader{
+	width: 100%;
+	display: inline-block;
+}
+.gosumypage_img{
+	position: relative;
+	float: left;
+}
+.gosumypage_img .gosupro{
+	width: 110px;
+	height: 110px;
+	border-radius: 10px;
+	overflow: hidden;
+}
+.click_icon img{
+	position: absolute;
+    right: 0;
+    bottom: 6px;
+    width: 1.875rem;
+    height: 1.875rem;
+    cursor: pointer;
+}
+.gosuinfo{
+	float: left;
+	margin-left: 30px;
+}
+.gosuinfo ul{
+	padding: 0;
+	margin-bottom: 30px;
+}
+.gosuinfo ul li{
+	position: relative;
+	display: inline-block;
+}	
+.point{
+	font-weight: 600;
+	font-size: 30px;
+	text-align: center;
+	color: #323232;
+}
+.label{
+	font-weight: 500;
+	font-size: 13px;
+	text-align: center;
+	color: #b5b5b5;
+}
+.divider{
+	height: 1.25rem;
+    width: 0.0625rem;
+    background-color: #e1e1e1;
+    margin: 0 0.5rem;
+    top: -1.5625rem;
+}
+
+/* ----------------------- */
+.my-profile-comp{
+	padding: 1.5rem 0;
+    border-bottom: 0.0625rem solid #f2f2f2;
+}
+.heading{
+	display: flex;
+    margin-bottom: 20px;
+}	
+.my-profile-comp .info{
+	font-size: 20px;
+}
+.heading h2{
+	font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.44;
+    letter-spacing: -.01875rem;
+    margin: 0;
+}
+
+.heading .action-group{
+	cursor: pointer;
+    font-size: .875rem;
+    font-weight: bolder;
+    line-height: 1.43;
+    letter-spacing: -.0125rem;
+    text-align: right;
+}	
+.action-group {
+    flex: 1;
+    color: #00c7ae;
+}
+.my-profile-comp .info {
+    font-size: 1rem;
+    text-align: left;
+    font-weight: normal;
+}	
+/* -------------- */
+.saving{
+	display: none;
+}
+.my-profile-comp input{
+	display: block;
+    width: 90%;
+    height: auto;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: rgb(50, 50, 50);
+    background-color: rgb(255, 255, 255);
+    background-clip: padding-box;
+    padding: 0.6875rem 1rem;
+    border-width: 0.0625rem;
+    border-style: solid;
+    border-color: rgb(204, 204, 204);
+    border-radius: 5px;
+}
+.action-group2{
+	cursor: pointer;
+    font-size: .875rem;
+    font-weight: bolder;
+    line-height: 1.43;
+    letter-spacing: -.0125rem;
+    color: red;
+    display: none;
+    flex: 1;
+    text-align: right;
+}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

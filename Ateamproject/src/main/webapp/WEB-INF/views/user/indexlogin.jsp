@@ -9,7 +9,6 @@
 	<title>My Login Page</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="resources/css/my-login2.css">
-
 </head>
 
 <body class="my-login-page">
@@ -23,12 +22,11 @@
 					<div class="card fat">
 						<div class="card-body">
 							<h4 class="card-title">로그인</h4>
-							<%--<form action="${path}/Bteamproject/loginPost" method="post" class="my-login-validation" novalidate=""> --%>
-							<form action="loginPost" method="post" class="my-login-validation" novalidate="">
+							<form action="loginPost" name="loginForm" method="post" class="my-login-validation" >
 								<div class="form-group">
 								<div class="form-item">
 									<label for="ID">E-Mail 주소</label>
-									<input id="ID" type="ID" class="form-control" name="id">
+									<input id="ID" type="text" class="form-control" name="id">
 									<div class="invalid-feedback">
 										Email is invalid
 									</div>
@@ -58,7 +56,7 @@
 								
 
 								<div class="form-group m-0">
-									<button type="submit" class="btn btn-primary btn-block" >
+									<button type="submit" class="btn btn-primary btn-block" onclick="login_btn()">
 										로그인
 									</button>
 								</div>
@@ -84,13 +82,28 @@
 	<script src="resources/js/my-login.js"></script>
 	
 	<script>
-
+	function login_btn(){
+		var form = $(".loginForm");
+		var mem_id = $("#ID");
+		var mem_pw = $("#password");
+		
+		if ( mem_id.val() == null || mem_id.val().trim() == ''){
+			alert("아이디를 확인해 주세요.");
+			return false;
+			
+		}else if ( mem_pw.val() == null || mem_pw.val().trim() == '' ){
+			alert("비밀번호를 확인해 주세요.");
+			return false;
+			
+		}else {
+			form.submit();
+		}
+	};
+		
     var msg = "${msg}";
     if (msg === "REGISTERED") {
         alert("회원가입이 완료되었습니다. 로그인해주세요~");
-    } else if (msg == "FAILURE") {
-        alert("아이디와 비밀번호를 확인해주세요.");
-    }
+    } else if (msg == "FAILUR
 </script>
 </body>
 </html>

@@ -1,0 +1,137 @@
+@charset "UTF-8";
+@import url(font-awesome.min.css);
+@import "https://fonts.googleapis.com/css?family=Raleway:100,300,600";
+
+#btn-group1{
+	width:100%;
+	display: block;
+}
+#chat-container1 {
+  padding-top: 100px;
+  width: 50%;
+  padding-bottom: 100px;
+}
+
+.avatar {
+    position: relative;
+}
+
+.btn-group.dropup{
+    position:fixed;
+
+}
+
+.btn-btn{
+    font-weight: bolder;
+    border-radius: 5px;
+    background-color: #00c7ae;
+    text-align: center;
+    color:white;
+    border: none;
+}
+
+
+input#file-upload-button{
+  font-weight: bolder;
+  border-radius: 5px;
+  background-color: #00c7ae;
+  text-align: center;
+  color:white;
+  border: none;
+}
+
+#forumwindow-body{
+margin: 0;
+font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+font-size: .88rem;
+font-weight: 400;
+line-height: 1.5;
+color: #495057;
+text-align: left;
+}
+
+.mt-100{
+  margin-top:100px
+}
+
+.card{
+box-shadow: 0 0.46875rem 2.1875rem rgba(4,9,20,0.03), 0 0.9375rem 1.40625rem rgba(4,9,20,0.03), 0 0.25rem 0.53125rem rgba(4,9,20,0.05), 0 0.125rem 0.1875rem rgba(4,9,20,0.03);
+border-width: 0;transition: all .2s
+}
+
+.card-header:first-child{
+border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0}.card-header{display: flex;align-items: center;border-bottom-width: 1px;
+padding-top: 0;
+padding-bottom: 0;
+padding-right: .625rem;
+height: 3.5rem;
+text-transform: uppercase;
+background-color: #fff;
+border-bottom: 1px solid rgba(26,54,126,0.125)
+}
+
+
+.btn{
+  font-weight: bolder;
+  border-radius: 5px;
+  background-color: #00c7ae;
+  color:white;
+  text-align: center;
+}
+
+.btn:hover{
+  background-color: #2b9d8f;
+  color: white;
+}
+.btn{
+font-size: 0.8rem;
+font-weight: 500;
+outline: none !important;
+position: relative;
+transition: color 0.15s,background-color 0.15s,border-color 0.15s,box-shadow 0.15s
+}
+
+.card-body{
+flex: 1 1 auto;
+padding: 1.25rem;
+border-top : 1px solid rgba(26,54,126,0.125);
+}
+
+.card-body p{
+font-size: 13px;
+}
+
+#show-textarea{
+	width:59%;
+	margin-right:auto;
+	margin-left: auto;
+box-shadow: 0 0.46875rem 2.1875rem rgb(4 9 20 / 3%), 0 0.9375rem 1.40625rem rgb(4 9 20 / 3%), 0 0.25rem 0.53125rem rgb(4 9 20 / 5%), 0 0.125rem 0.1875rem rgb(4 9 20 / 3%);
+    border-width: 0;
+    transition: all .2s;
+    margin-bottom: 23px;
+}
+
+a{
+color: white;
+text-decoration: none !important;
+background-color: transparent
+}
+
+.media img{
+width: 40px;height: auto
+}
+
+.container-fluid{
+	padding-top: 3rem;
+  /*   padding-bottom: 3rem; */
+    width: 60%;
+    flex-direction: column;
+    align-items: center;
+}
+
+textarea.form-control{
+	margin-left:4px;
+	margin-top:6px;
+	width:99%;
+	
+}

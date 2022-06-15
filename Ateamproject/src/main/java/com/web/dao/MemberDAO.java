@@ -1,7 +1,6 @@
 package com.web.dao;
 
-import org.mybatis.spring.SqlSessionTemplate;
-import org.springframework.beans.factory.annotation.Autowired;
+
 
 
 import org.apache.ibatis.session.SqlSession;
@@ -16,25 +15,26 @@ import com.web.vo.MemberVO;
 
 
 public interface MemberDAO {
-	 
-
-	
 	void register(MemberVO memberVO) throws Exception;
 
 	public void remove(MemberVO vo) throws Exception;
 
-	int login(LoginDTO loginDTO) throws Exception;
+	public String login(LoginDTO loginDTO) throws Exception;
 
 	public List<MemberVO> memberList();
-	// 회원 입력
+	// �쉶�썝 �엯�젰
 	public void insertMember(MemberVO vo);
-	// 회원 정보 상세보기
+	// �쉶�썝 �젙蹂� �긽�꽭蹂닿린
 	public MemberVO viewMember(String ID);
-	// 회원삭제
+	// �쉶�썝�궘�젣
 	public void deleteMember(String ID);
-	// 회원정보 수정
+	// �쉶�썝�젙蹂� �닔�젙
 	public void updateMember(MemberVO ID);
 	
-	 }
-
+	public MemberVO mypageUinfo(String mnum);
+	
+	void UnameUpdate(MemberVO memberVO) throws Exception;
+	void UidUpdate(MemberVO memberVO) throws Exception;
+	void UhpUpdate(MemberVO memberVO) throws Exception;
+}
 

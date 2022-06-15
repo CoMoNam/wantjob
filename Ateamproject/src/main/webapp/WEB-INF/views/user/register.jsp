@@ -10,7 +10,6 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet"  href="resources/css/my-login2.css">
 <style>
-
         #modal {
           display: none;
           position:relative;
@@ -67,12 +66,11 @@
           background:rgba(0, 0, 0, 0.5);
           z-index:-1;
         } 
- </style>
- 
+ <</style>
 </head>
 <% request.setCharacterEncoding("UTF-8"); %>
 <body class="my-login-page">
-<jsp:include page="../header2.jsp"></jsp:include>
+<jsp:include page="../header.jsp"></jsp:include>
 	<section class="m-5">
 			<div class="row justify-content-md-center h-100">
 				<div class="card-wrapper">
@@ -87,16 +85,12 @@
 									<input id="name" type="text" class="form-control" name="name" required autofocus>
 									<div class="invalid-feedback">
 										이름을 작성해주세요.
-		
 									</div>
-									
-
 								</div>
 
 								<div class="form-group">
 									<label for="ID">E-Mail 주소</label>
-									<input id="ID" type="ID" class="form-control" name="ID">
-		
+									<input id="ID" type="ID" class="form-control" name="ID" required>
 									<div class="invalid-feedback">
 										이메일을 작정해주세요.
 									</div>

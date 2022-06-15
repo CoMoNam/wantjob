@@ -36,26 +36,17 @@ import org.springframework.web.servlet.ModelAndView;
         @Override
         public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
 
-        
-        		
-        		/**
-        		 * This implementation always returns <code>true</code>.
-        		 */
-        			
-        			//1. request 객체에서 세션정보 얻어오기
-        			HttpSession session = request.getSession();
-        			String sid = (String)session.getAttribute("sid");
-        			
-        			//2. 세션정보 체크 및 페이지 이동
-        			if(sid == null) {
-        				response.sendRedirect("http://localhost:9000/mycgv/login.do?auth_result=fail");
-        				
-        				return false;
-        			}
-        			
-        			return true;
-        		}
-        	}
+            HttpSession httpSession = request.getSession();
 
+            if (httpSession.getAttribute("login") == null) {
+                logger.info("current user is not logged");
+                response.sendRedirect("/user/login");
+                return false;
+            }
+
+            return true;
+        }
+        }
+    
 
 

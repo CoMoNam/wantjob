@@ -13,7 +13,7 @@
 <body >
 
 <body class="my-login-page">
-<jsp:include page="../header2.jsp"></jsp:include>
+<jsp:include page="../header.jsp"></jsp:include>
 
 	<section class="h-100">
 		<div class="m-5">

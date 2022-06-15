@@ -2,14 +2,15 @@
     pageEncoding="UTF-8"%>
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
-<%String sid = (String)session.getAttribute("sid");%>    
+<%String sid = (String)session.getAttribute("sid");%>
+<%String smnum = (String)session.getAttribute("smnum");%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" href="resources/css/main.css" />
-
+<link rel="stylesheet" type="text/css" href="resources/css/header-gosu.css">
 <title>header</title>
 </head>
 <body>
@@ -52,7 +53,7 @@
 							<div id="myDropdown" class="dropdown-content" >
 								<div class="name"><div class="name-box"></div></div>
 								<%=sid %>
-                                 <div class="li1" ><a href="mypage">마이페이지</a></div>
+                                 <div class="li1" ><a href="mypage?mnum=<%=smnum%>">마이페이지</a></div>
 								    <hr class="header-line">
 								    <div class="bottom-li">
 								  

@@ -11,7 +11,7 @@
 	</appender>
 	
 	<!-- Application Loggers -->
-	<logger name="com.web.Bteamproject">
+	<logger name="com.web.Ateamproject">
 		<level value="info" />
 	</logger>
 	
